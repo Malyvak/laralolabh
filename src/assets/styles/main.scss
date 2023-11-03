@@ -1,0 +1,455 @@
+@import 'fonts';
+
+body {
+    font-family: Museo, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #222222;
+    
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+.header {
+    position: fixed;
+    background-color: #323232;
+    padding: 3rem 6rem 2rem 6rem;
+    top: 0;  
+    width: 100%;
+    z-index: 5;
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+
+        .brand {
+            width: 14rem;
+            margin-right: 4rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+
+            .nav-link {
+                text-decoration: none;
+                color: #fff;
+                transition: color 0.3s ease;
+                font-family: Futura, sans-serif;
+                font-weight: bold;
+                font-size: small;
+                letter-spacing: 0.1em;
+
+                &:hover {
+                    color: #aaa;
+                }
+            }
+        }
+    }
+}
+
+.showreel {
+    padding: 7rem 6rem 3rem 6rem;
+    background-color: #323232;
+
+    .showreel-video {
+        width: 100%;
+    }
+    
+    .showreel-subtext-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+
+        .showreel-subtext {
+            color: #fff;
+            font-family: Museo, sans-serif;
+            font-weight: 700;
+            font-size: 0.8rem;
+            
+            .bold {
+                font-weight: 900;
+            }
+        }
+    }
+}
+
+.editing {
+    padding: 1rem 6rem;
+    background-color: #004159;
+
+    .title {
+        text-align: center;
+        color: #fff;
+        letter-spacing: 0.1em;
+        font-family: Futura, sans-serif;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .projects {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    
+        .project {
+            flex-basis: calc(20% - 3rem);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1rem;
+        
+            img {
+                width: 13em;
+                height: 13rem;
+                margin-bottom: 0.75rem;
+                object-fit: cover;
+                object-position: center;
+            }
+        
+            .project-title {
+                max-width: 12rem;
+                text-align: center;
+                font-size: 14px;
+                font-weight: 500;
+                margin-bottom: 0.3rem;
+                letter-spacing: 0.05em;
+                line-height: 1.4;
+            }
+        
+            .project-description {
+                max-width: 12rem;
+                text-align: center;
+                font-style: italic;
+                font-weight: 100; 
+                font-size: 12px;
+            }
+        }
+    }
+} 
+
+.professional-information {
+    padding: 2rem 6rem;
+
+    .title {
+        text-align: center;
+        letter-spacing: 0.1em;
+        font-family: Futura, sans-serif;
+        font-size: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .content {
+        column-count: 4;
+        column-gap: 3rem;
+        padding-bottom: 3rem;
+
+        p {
+            margin-top: 0;
+            font-weight: 500;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+    }
+
+    .table-container {
+        display: flex;
+        margin-bottom: 2rem;
+
+        .table-header {
+            width: 25%;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #FFF;
+
+            &.header-1 {
+                background-color: #0C5C20;
+            }
+
+            &.header-2 {
+                background-color: #B72618;
+            }
+
+            &.header-3 {
+                background-color: #004159;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+                letter-spacing: 0.1em;
+                text-align: center;
+            }
+        }
+
+        .table-content {
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2rem 3rem 2rem 1rem;
+
+            &.content-1 {
+                background-color: #e7efe9;
+            }
+
+            &.content-2 {
+                background-color: #f8e9e8;
+            }
+
+            .company {
+                font-weight: 900;
+            }
+
+            ul {
+                margin: 0;
+                padding-left: 2rem;
+                
+                li {
+                    font-weight: 500;
+                    font-size: 16px;
+                    padding: 0.25rem 0;
+                    line-height: 1.5;
+                }
+            }
+
+            .education-item {
+                padding-left: 0.5rem;
+                font-size: 16px;
+                margin: 0.25rem;
+                line-height: 1.5;
+            }
+
+            p {
+                padding-left: 0.5rem;
+                font-size: 16px;
+                line-height: 1.5;
+                margin: 0;
+            }
+        }
+    }
+}
+
+.about-me {
+    padding: 2rem 6rem 6rem 6rem;
+    background-image: url('../images/EyePainting.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .title {
+        text-align: center;
+        color: #FFF;
+        letter-spacing: 0.1em;
+        font-family: Futura, sans-serif;
+        font-size: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .about-me-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        .about-me-content {
+            display: flex;
+            padding: 1.3rem;
+            background-color: white;
+            gap: 1.2rem;
+            
+            .images-wrapper {
+                display: flex;
+                gap: 1.2rem;
+                padding: 0.2rem 0;
+
+                .image-container {
+                    width: 215px;
+                    height: 215px;
+                    overflow: hidden;
+                    position: relative;
+            
+                    img {
+                        position: absolute;
+                        top: 50%; 
+                        left: 50%;
+
+                        &.image-1 {
+                            width: 14rem;
+                            transform: translate(-49%, -50%);
+                        }
+
+                        &.image-2 {
+                            width: 16rem;
+                            transform: translate(-55%, -60%);
+                        }
+
+                        &.image-3 {
+                            width: 18rem;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                }    
+            }
+            
+
+            .about-me-text {
+                p {
+                    font-size: 14px;
+                    margin: 0;
+                    margin-bottom: 0.5rem;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contact-me {
+    padding: 4rem 6rem 4rem 6rem;
+    background-color: #c2c2c2;
+    
+    .contact-me-container {
+        display: flex;
+        flex-wrap: wrap;
+
+        .col-1 {
+            width: 25%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .info {
+
+                .logo {
+                    width: 14rem;
+                    margin-bottom: 0.75rem;
+                }
+                
+                .email {
+                    font-weight: 700;
+                    font-size: 16px;
+                }
+            }
+
+            .acknowledgement {
+                font-size: 12px;
+                line-height: 1.8;
+                font-style: italic;
+            }
+        }
+        
+        .col-2 {
+            width: 35%;
+            padding: 0 1.5rem;
+
+            .quote-circle {
+                width: 100%;;
+            }
+        }
+        
+        .col-3 {
+            width: 40%;
+
+            .contact-form {
+                
+                .contact-header{
+                    background-color: #323232;
+                    color: #FFF;
+                    padding: 0.5rem 1rem;
+                    margin: 0;
+                    font-weight: 700;
+                    font-size: 14px;
+                }
+
+                .contact-content {
+                    position: relative;
+                    background-color: #adadad;
+                    padding: 1rem;
+
+                    .input-container {
+                        display: flex;
+
+                        .form-group {
+                            width: 50%;
+                        }
+                    }
+
+                    .form-group {
+                        display: flex;
+                        margin-bottom: 0.5rem;
+                        align-items: center;
+
+                        .input-label, .textarea-label {
+                            background-color: #FFF;
+                            padding: 10px;
+                            font-size: 12px;
+                            font-weight: 700;
+                        }
+
+                        .textarea-label {
+                            display: block;
+                            width: 100%;
+                        }
+                    
+                        input,
+                        textarea {
+                            width: 100%;
+                            padding: 10px;
+                            height: 34px;
+                            font-size: 12px;
+                            border: none;
+                            font-family: "Museo", sans-serif;
+                        
+                            &:focus {
+                                outline: none;
+                            }
+                        }
+
+                        textarea {
+                            resize: none;
+                            height: auto;
+                            padding: 0 10px 10px 10px;
+                        }
+                    }
+
+                    .textarea-group {
+                        display: block;
+                    }
+
+                    .submit-button {
+                        position: absolute;
+                        bottom: 10%;
+                        left: 42.5%;
+
+
+                        background-color: #f36c22;
+                        color: #FFF;
+                        border: none;
+                        border-radius: 1rem;
+                        font-weight: 700;
+                        font-family: "Museo", sans-serif;
+                        font-size: 12px;
+                        padding: 0.4rem 1rem;
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+// _fonts.scss
+@mixin museo-font($path, $weight, $style: normal) {
+    @font-face {
+      font-family: 'Museo';
+      src: url($path) format('opentype');
+      font-weight: $weight;
+      font-style: $style;
+    }
+}
+
+@include museo-font('@/assets/fonts/museo/MuseoSans_0.otf', 300);
+@include museo-font('@/assets/fonts/museo/MuseoSans_1.otf', 500);
+@include museo-font('@/assets/fonts/museo/MuseoSans_2.otf', 700);
+@include museo-font('@/assets/fonts/museo/MuseoSans_3.otf', 900);
+
+@include museo-font('@/assets/fonts/museo/MuseoSans_100_Italic.otf', 100, italic);
+@include museo-font('@/assets/fonts/museo/MuseoSans_300_Italic.otf', 300, italic);
+@include museo-font('@/assets/fonts/museo/MuseoSans_500_Italic.otf', 500, italic);
+@include museo-font('@/assets/fonts/museo/MuseoSans_700_Italic.otf', 700, italic);
+
+@font-face {
+    font-family: 'Futura';
+    src: url('@/assets/fonts/futura/Futura_LT_Heavy.ttf') format('truetype');
+    font-weight: 700; // Assuming this is bold
+    font-style: normal;
+}
+
+  
