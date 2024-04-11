@@ -28,11 +28,11 @@ import video10 from '@/assets/videos/010-short.mp4';
 
 
 
-interface Map {
+interface StringSearchKeyMap {
     [key: string]: any;
 }
 
-const imageMap: Map = {
+const imageMap: StringSearchKeyMap = {
   image1: image1,
   image2: image2,
   image3: image3,
@@ -45,7 +45,7 @@ const imageMap: Map = {
   image10: image10,
 };
 
-const videoMap: Map = {
+const videoMap: StringSearchKeyMap = {
   image1: video1,
   image2: video2,
   image3: video3,

@@ -1,23 +1,26 @@
 <script lang="ts" setup>
 import { ref, watch } from 'vue';
 
+import video1 from '@/assets/videos/showreel/001_ShowreelMiniCut.mp4';
+import video2 from '@/assets/videos/showreel/002_ShowreelMiniCut.mp4';
+import video3 from '@/assets/videos/showreel/003_ShowreelMiniCut.mp4';
+import video4 from '@/assets/videos/showreel/004_ShowreelMiniCut.mp4';
+import video5 from '@/assets/videos/showreel/005_ShowreelMiniCut.mp4';
+import video6 from '@/assets/videos/showreel/006_ShowreelMiniCut.mp4';
+import video7 from '@/assets/videos/showreel/007_ShowreelMiniCut.mp4';
+import video8 from '@/assets/videos/showreel/008_ShowreelMiniCut.mp4';
+import video9 from '@/assets/videos/showreel/009_ShowreelMiniCut.mp4';
+import video10 from '@/assets/videos/showreel/010_ShowreelMiniCut.mp4';
+import video11 from '@/assets/videos/showreel/011_ShowreelMiniCut.mp4';
+import video12 from '@/assets/videos/showreel/012_ShowreelMiniCut.mp4';
+import video13 from '@/assets/videos/showreel/013_ShowreelMiniCut.mp4';
+import video14 from '@/assets/videos/showreel/014_ShowreelMiniCut.mp4';
+
 type VideoSource = string;
 
 const videoSources: VideoSource[] = [
-  'src/assets/videos/showreel/001_ShowreelMiniCut.mp4',
-  'src/assets/videos/showreel/002_ShowreelMiniCut.mp4',
-  'src/assets/videos/showreel/003_ShowreelMiniCut.mp4',
-  'src/assets/videos/showreel/004_ShowreelMiniCut.mp4',
-  'src/assets/videos/showreel/005_ShowreelMiniCut.mp4',
-  'src/assets/videos/showreel/006_ShowreelMiniCut.mp4',
-  'src/assets/videos/showreel/007_ShowreelMiniCut.mp4',
-  'src/assets/videos/showreel/008_ShowreelMiniCut.mp4',
-  'src/assets/videos/showreel/009_ShowreelMiniCut.mp4',
-  'src/assets/videos/showreel/010_ShowreelMiniCut.mp4',
-  'src/assets/videos/showreel/011_ShowreelMiniCut.mp4',
-  'src/assets/videos/showreel/012_ShowreelMiniCut.mp4',
-  'src/assets/videos/showreel/013_ShowreelMiniCut.mp4',
-  'src/assets/videos/showreel/014_ShowreelMiniCut.mp4',
+  video1, video2, video3, video4, video5, video6, video7, video8, video9,
+  video10, video11, video12, video13, video14
 ];
 
 
