@@ -5,7 +5,7 @@ import quoteCircle from '@/assets/images/QuoteCircle.png'
 </script>
 
 <template>
-    <section class="contact-me">
+    <section id="contact-me" class="contact-me">
         <div class="contact-me-container">
             <div class="col-1">
                 <div class="info">
@@ -15,14 +15,14 @@ import quoteCircle from '@/assets/images/QuoteCircle.png'
                 <div class="acknowledgement">
                     I acknowledge the traditional custodians of the land on which I am privileged to live 
                     and work, the Jagera and Turrbal people, and pay my respects to Aboriginal and Torres 
-                    Strait Islander peoples andelders past, present, and emerging.
+                    Strait Islander peoples and elders past, present, and emerging.
                 </div>
             </div>
             <div class="col-2">
                 <img class="quote-circle" :src="quoteCircle"/>
             </div>
             <div class="col-3">
-                <form class="contact-form" action="https://formsubmit.co/malyvak@outlook.com" method="POST">
+                <form class="contact-form" target="_blank" action="https://formsubmit.co/19989f651fb03061060298e241c00fd2" method="POST">
                     <h4 class="contact-header">CONTACT ME</h4>
                     <div class=contact-content>
 

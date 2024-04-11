@@ -7,7 +7,7 @@ import image3 from '@/assets/images/AboutMeLaraImage_3.jpg';
 </script>
 
 <template>
-    <section class="about-me">
+    <section id="about-me" class="about-me">
         <h1 class="title">ABOUT ME</h1>
         <div class="about-me-container">
             <div class="about-me-content">

@@ -1,5 +1,8 @@
 <script lang="ts" setup>
+import { ref } from 'vue';
 import VideoComponent from '@/components/VideoComponent.vue';
+import VideoModal from '@/components/VideoModal.vue';
+import projectsData from '@/data/videos.json';
 
 import image1 from '@/assets/images/Image1_GoFStill.png';
 import image2 from '@/assets/images/Image2_BlondedLIAG.png';
@@ -12,64 +15,83 @@ import image8 from '@/assets/images/Image8_WBGS2.png';
 import image9 from '@/assets/images/Image9_BlondedOC.png';
 import image10 from '@/assets/images/Image10_Frog.png';
 
+import video1 from '@/assets/videos/001-short.mp4';
+import video2 from '@/assets/videos/002-short.mp4';
+import video3 from '@/assets/videos/003-short.mp4';
+import video4 from '@/assets/videos/004-short.mp4';
+import video5 from '@/assets/videos/005-short.mp4';
+import video6 from '@/assets/videos/006-short.mp4';
+import video7 from '@/assets/videos/007-short.mp4';
+import video8 from '@/assets/videos/008-short.mp4';
+import video9 from '@/assets/videos/009-short.mp4';
+import video10 from '@/assets/videos/010-short.mp4';
+
+
+
+interface Map {
+    [key: string]: any;
+}
+
+const imageMap: Map = {
+  image1: image1,
+  image2: image2,
+  image3: image3,
+  image4: image4, 
+  image5: image5,
+  image6: image6,
+  image7: image7,
+  image8: image8,
+  image9: image9, 
+  image10: image10,
+};
+
+const videoMap: Map = {
+  image1: video1,
+  image2: video2,
+  image3: video3,
+  image4: video4, 
+  image5: video5,
+  image6: video6,
+  image7: video7,
+  image8: video8,
+  image9: video9, 
+  image10: video10,
+};
+
+const showModal = ref(false);
+const currentVideoId = ref('');
+
+const openModal = (videoId: string) => {
+  currentVideoId.value = videoId;
+  showModal.value = true;
+};
+
+const closeModal = () => {
+  showModal.value = false;
+};
+
 </script>
 
 <template>
-    <section class="editing">
-
+    <section id="editing" class="editing">
         <h1 class="title">EDITING WORK</h1>
 
         <div class="projects">
+            <div class="projects">
             <VideoComponent
-                :image="image1"
-                title="'Girls on Fire' webseries"
-                description="Webseries teaser trailer"
+                v-for="project in projectsData"
+                :key="project.title"
+                :videoSrc="videoMap[project.image]"
+                :image="imageMap[project.image]"
+                :title="project.title"
+                :description="project.description"
+                @click.native="openModal(project.link)"
             />
-            <VideoComponent
-                :image="image2"
-                title="Blonded 'Love is a Gun' single launch"
-                description="Promotional marketing piece"
-            />
-            <VideoComponent
-                :image="image3"
-                title="Girl Shaped Flames 'Camp Courage'"
-                description="Event promo"
-            />
-            <VideoComponent
-                :image="image4"
-                title="'Village of Light'"
-                description="Event advertisement"
-            />
-            <VideoComponent
-                :image="image5"
-                title="The World's Biggest Garage Sale 'Responsible Re-Fit'"
-                description="Marketing campaign (made in association with Connect Creative)"
-            />
-
-            <VideoComponent
-                :image="image6"
-                title="SixPivot 'Passion'"
-                description="Brand marketing piece"
-            />
-            <VideoComponent
-                :image="image7"
-                title="Ky Furneaux 'Aussie in Action'"
-                description="Personal brand showreel"
-            />
-            <VideoComponent
-                :image="image8"
-                title="The World's Biggest Garage Sale 'Mickey Box'"
-                description="Product launch advertisement (made in association with Connect Creative)"
-            />
-            <VideoComponent
-                :image="image9"
-                title="Blonded 'Out Cold'"
-                description="Brand marketing piece"
-            />
-            <VideoComponent
-                :image="image10"
-                title="'A Frog's Short Day Out"
-                description="PoC short animation"
+            </div>
+            <VideoModal
+                :showModal="showModal"
+                :videoId="currentVideoId"
+                @close="closeModal"
             />
         </div>
     </section>

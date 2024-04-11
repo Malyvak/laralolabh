@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <section class="professional-information">
+    <section id="professional-information" class="professional-information">
         <h1 class="title">PROFESSIONAL INFORMATION</h1>
         <div class="content">
             <p>
@@ -41,7 +41,7 @@
             <div class="table-content content-1">
                 <ul>
                     <li>
-                        Post-production skillset, primarily focussed in the Adobe suite, but also extending into Da Vinci Resolve and Avid Media Composer
+                        Post-production skillset, primarily focused in the Adobe suite, but also extending into Da Vinci Resolve and Avid Media Composer
                     </li>
                     <li>
                         General knowledge of graphic design programs such as Photoshop, Illustrator, and InDesign
@@ -76,7 +76,7 @@
                     video editor and post-production artist, however regularly delving into branding; copywriting; graphic
                     design; animation; content strategy; and hands-on video production from the ground up. A few of my
                     favourite clients over the years include Hollywood stunt artist Ky Furneaux; the Summer Solstice festival;
-                    and various local musicians. These jobs have spanned from highly focussed corporate marketing to freereining 
+                    and various local musicians. These jobs have spanned from highly focused corporate marketing to free-reining 
                     creative works, a spectrum that I tailor to day by day based on the clients' needs.
                 </p>
                 <br>
