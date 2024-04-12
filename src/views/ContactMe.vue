@@ -12,11 +12,11 @@ import quoteCircle from '@/assets/images/QuoteCircle.png'
                     <img class="logo" :src="logo"/>
                     <div class="email">laralolabh@gmail.com</div>
                 </div>
-                <div class="acknowledgement">
+                <!-- <div class="acknowledgement">
                     I acknowledge the traditional custodians of the land on which I am privileged to live 
                     and work, the Jagera and Turrbal people, and pay my respects to Aboriginal and Torres 
                     Strait Islander peoples and elders past, present, and emerging.
-                </div>
+                </div> -->
             </div>
             <div class="col-2">
                 <img class="quote-circle" :src="quoteCircle"/>

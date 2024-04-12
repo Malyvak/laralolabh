@@ -8,21 +8,23 @@ const props = defineProps<{
     description: string;
 }>();
 
-const showImage= ref(true);
+const showVideo= ref(false);
 
 const playVideo = (event: Event) => {
-  const videoElement = event.target as HTMLVideoElement;
-  if (videoElement) {
-    videoElement.play();
-  }
+    const videoElement = event.target as HTMLVideoElement;
+    if (videoElement) {
+        videoElement.play();
+    }
 };
 
 const pauseVideo = (event: Event) => {
-  const videoElement = event.target as HTMLVideoElement;
-  if (videoElement) {
-    videoElement.pause();
-    videoElement.currentTime = 0;
-  }
+    const videoElement = event.target as HTMLVideoElement;
+    if (videoElement) {
+        setTimeout(() => {
+            videoElement.pause();
+            videoElement.currentTime = 0;
+        }, 1000);
+    }
 };
 </script>
 
@@ -31,15 +33,16 @@ const pauseVideo = (event: Event) => {
         <div 
             class="video-container" 
             @click="$emit('imageClick')"
-            @mouseenter="showImage = false" 
-            @mouseleave="showImage = true" 
+            @mouseenter="showVideo = true" 
+            @mouseleave="showVideo = false" 
         >   
-            <Transition name="fade">
+            <!-- <Transition name="fade">
                 <img v-if="showImage" class="project-image" :src="image"/>
-            </Transition>
+            </Transition> -->
+            <img class="project-image" :src="image"/>
             <Transition name="slow-fade">
             <video 
-                v-if="!showImage"
+                v-if="showVideo"
                 class="project-video"
                 :src="videoSrc"
                 loop 

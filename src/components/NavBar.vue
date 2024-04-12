@@ -18,7 +18,7 @@ onUnmounted(() => {
 });
 
 function updateNavbarScrollVisibility() {
-    const showNavbarScrollPosition = 110; // For scroll position
+    const showNavbarScrollPosition = 50; // For scroll position
 
     if (window.scrollY <= showNavbarScrollPosition) {
         isScrollAtTop.value = true;
