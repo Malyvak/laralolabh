@@ -15,16 +15,16 @@ import image8 from '@/assets/images/Image8_WBGS2.png';
 import image9 from '@/assets/images/Image9_BlondedOC.png';
 import image10 from '@/assets/images/Image10_Frog.png';
 
-import video1 from '@/assets/videos/001-short.mp4';
-import video2 from '@/assets/videos/002-short.mp4';
-import video3 from '@/assets/videos/003-short.mp4';
-import video4 from '@/assets/videos/004-short.mp4';
-import video5 from '@/assets/videos/005-short.mp4';
-import video6 from '@/assets/videos/006-short.mp4';
-import video7 from '@/assets/videos/007-short.mp4';
-import video8 from '@/assets/videos/008-short.mp4';
-import video9 from '@/assets/videos/009-short.mp4';
-import video10 from '@/assets/videos/010-short.mp4';
+import video1 from '@/assets/videos/001-short-converted.mp4';
+import video2 from '@/assets/videos/002-short-converted.mp4';
+import video3 from '@/assets/videos/003-short-converted.mp4';
+import video4 from '@/assets/videos/004-short-converted.mp4';
+import video5 from '@/assets/videos/005-short-converted.mp4';
+import video6 from '@/assets/videos/006-short-converted.mp4';
+import video7 from '@/assets/videos/007-short-converted.mp4';
+import video8 from '@/assets/videos/008-short-converted.mp4';
+import video9 from '@/assets/videos/009-short-converted.mp4';
+import video10 from '@/assets/videos/010-short-converted.mp4';
 
 
 
