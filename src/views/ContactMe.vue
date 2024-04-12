@@ -22,7 +22,7 @@ import quoteCircle from '@/assets/images/QuoteCircle.png'
                 <img class="quote-circle" :src="quoteCircle"/>
             </div>
             <div class="col-3">
-                <form class="contact-form" target="_blank" action="https://formsubmit.co/19989f651fb03061060298e241c00fd2" method="POST">
+                <form class="contact-form" target="_blank" action="https://formsubmit.co/laralolabh@gmail.com" method="POST">
                     <h4 class="contact-header">CONTACT ME</h4>
                     <div class=contact-content>
 

@@ -2,20 +2,20 @@
 import { ref, watch, onMounted } from 'vue';
 
 const videoImports: VideoImports = {
-  '0': () => import('@/assets/videos/showreel/001_ShowreelMiniCut-converted.mp4'),
-  '1': () => import('@/assets/videos/showreel/002_ShowreelMiniCut-converted.mp4'),
-  '2': () => import('@/assets/videos/showreel/003_ShowreelMiniCut-converted.mp4'),
-  '3': () => import('@/assets/videos/showreel/004_ShowreelMiniCut-converted.mp4'),
-  '4': () => import('@/assets/videos/showreel/005_ShowreelMiniCut-converted.mp4'),
-  '5': () => import('@/assets/videos/showreel/006_ShowreelMiniCut-converted.mp4'),
-  '6': () => import('@/assets/videos/showreel/007_ShowreelMiniCut-converted.mp4'),
-  '7': () => import('@/assets/videos/showreel/008_ShowreelMiniCut-converted.mp4'),
-  '8': () => import('@/assets/videos/showreel/009_ShowreelMiniCut-converted.mp4'),
-  '9': () => import('@/assets/videos/showreel/010_ShowreelMiniCut-converted.mp4'),
-  '10': () => import('@/assets/videos/showreel/011_ShowreelMiniCut-converted.mp4'),
-  '11': () => import('@/assets/videos/showreel/012_ShowreelMiniCut-converted.mp4'),
-  '12': () => import('@/assets/videos/showreel/013_ShowreelMiniCut-converted.mp4'),
-  '13': () => import('@/assets/videos/showreel/014_ShowreelMiniCut-converted.mp4')
+  '0': () => import('@/assets/videos/showreel/014_ShowreelMiniCut-converted.mp4'),
+  '1': () => import('@/assets/videos/showreel/001_ShowreelMiniCut-converted.mp4'),
+  '2': () => import('@/assets/videos/showreel/002_ShowreelMiniCut-converted.mp4'),
+  '3': () => import('@/assets/videos/showreel/003_ShowreelMiniCut-converted.mp4'),
+  '4': () => import('@/assets/videos/showreel/004_ShowreelMiniCut-converted.mp4'),
+  '5': () => import('@/assets/videos/showreel/005_ShowreelMiniCut-converted.mp4'),
+  '6': () => import('@/assets/videos/showreel/006_ShowreelMiniCut-converted.mp4'),
+  '7': () => import('@/assets/videos/showreel/007_ShowreelMiniCut-converted.mp4'),
+  '8': () => import('@/assets/videos/showreel/008_ShowreelMiniCut-converted.mp4'),
+  '9': () => import('@/assets/videos/showreel/009_ShowreelMiniCut-converted.mp4'),
+  '10': () => import('@/assets/videos/showreel/010_ShowreelMiniCut-converted.mp4'),
+  '11': () => import('@/assets/videos/showreel/011_ShowreelMiniCut-converted.mp4'),
+  '12': () => import('@/assets/videos/showreel/012_ShowreelMiniCut-converted.mp4'),
+  '13': () => import('@/assets/videos/showreel/013_ShowreelMiniCut-converted.mp4')
 };
 
 interface VideoImports {
@@ -57,8 +57,9 @@ const handleVideoEnd = () => {
 };
 
 const videoLoaded = () => {
+  // Hide overlay (fade in video)
+  isOverlayVisible.value = false;
   setTimeout(() => {
-    isOverlayVisible.value = false; // Hide overlay (fade in video)
     videoPlayer.value?.play();
   }, 500); // Delay to allow a smooth fade-in effect
 };
