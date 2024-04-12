@@ -24,7 +24,6 @@ interface VideoImports {
 type VideoSource = string;
 const videoSources: VideoSource[] = [];
 
-
 const currentVideoIndex = ref(0);
 const currentVideo = ref('');
 
@@ -51,7 +50,7 @@ onMounted(() => {
 const handleVideoEnd = () => {
   isOverlayVisible.value = true; // Show overlay (fade to black)
   setTimeout(() => {
-    currentVideoIndex.value = (currentVideoIndex.value + 1) % videoImports.length;
+    currentVideoIndex.value = (currentVideoIndex.value + 1) % Object.keys(videoImports).length;
     loadVideo(currentVideoIndex.value);
     videoPlayerKey.value = Date.now(); // Update key to force re-render of video element
   }, 500); // Delay to allow overlay to become fully visible
