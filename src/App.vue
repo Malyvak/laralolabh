@@ -55,7 +55,7 @@ onMounted(loadAssets);
 
 <template>
     <transition name="site-fade">
-        <div v-if="isLoaded">
+        <div v-if="!isLoaded">
             <EyeAnimation/>
         </div>
 
