@@ -13,22 +13,35 @@ body {
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
 }
-
 .fade-enter-from,
 .fade-leave-to {
-  opacity: 0;
+    opacity: 0;
 }
 
 .slow-fade-enter-active,
 .slow-fade-leave-active {
-  transition: opacity 1s ease;
+    transition: opacity 1s ease;
 }
-
 .slow-fade-enter-from,
 .slow-fade-leave-to {
-  opacity: 0;
+    opacity: 0;
+}
+
+.site-fade-enter-active, 
+.site-fade-leave-active {
+    transition: opacity 0.5s, background-color 0.5s;
+}
+.site-fade-enter-from, 
+.site-fade-leave-to {
+    opacity: 0;
+    background-color: white;
+}
+.site-fade-enter-to, 
+.site-fade-leave-from {
+    opacity: 1;
+    background-color: transparent;
 }
 
 .modal-overlay {
