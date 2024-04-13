@@ -35,15 +35,14 @@ const loadVideo = (index: number) => {
   if (loader) {
     loader().then((module: { default: string; }) => {
       currentVideo.value = module.default;
-      isOverlayVisible.value = true; // Ready to fade out the old video, if any
+      isOverlayVisible.value = true;
       setTimeout(() => {
-        isOverlayVisible.value = false; // Fade in new video
-      }, 100); // Minimal delay before fading in new video
+        isOverlayVisible.value = false;
+      }, 100);
     });
   }
 };
 
-// Initial load for the first video
 onMounted(() => {
   loadVideo(0);
 });
@@ -58,7 +57,6 @@ const videoLoaded = () => {
     videoPlayer.value?.play();
 };
 
-// Watch the currentVideo to load the new source whenever it changes
 watch(currentVideo, () => {
   if (videoPlayer.value) {
     videoPlayer.value.load();

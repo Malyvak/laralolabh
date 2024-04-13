@@ -36,21 +36,18 @@ const pauseVideo = (event: Event) => {
             @mouseenter="showVideo = true" 
             @mouseleave="showVideo = false" 
         >   
-            <!-- <Transition name="fade">
-                <img v-if="showImage" class="project-image" :src="image"/>
-            </Transition> -->
             <img class="project-image" :src="image"/>
             <Transition name="slow-fade">
-            <video 
-                v-if="showVideo"
-                class="project-video"
-                :src="videoSrc"
-                loop 
-                @mouseenter="playVideo" 
-                @mouseleave="pauseVideo" 
-                muted
-            >
-            </video>
+                <video 
+                    v-if="showVideo"
+                    class="project-video"
+                    :src="videoSrc"
+                    loop 
+                    @mouseenter="playVideo" 
+                    @mouseleave="pauseVideo" 
+                    muted
+                >
+                </video>
             </Transition>
         </div>
         

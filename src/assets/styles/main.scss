@@ -1,4 +1,5 @@
 @import 'fonts';
+@import 'animations';
 
 body {
     font-family: Museo, sans-serif;
@@ -24,37 +25,6 @@ body {
         height: auto; /* Maintain aspect ratio */
         max-height: 100vh; /* Ensures it doesn't overflow vertically */
     }
-}
-
-.fade-enter-active,
-.fade-leave-active {
-    transition: opacity 0.5s ease;
-}
-.fade-enter-from,
-.fade-leave-to {
-    opacity: 0;
-}
-
-.slow-fade-enter-active,
-.slow-fade-leave-active {
-    transition: opacity 1s ease;
-}
-.slow-fade-enter-from,
-.slow-fade-leave-to {
-    opacity: 0;
-}
-
-.site-fade-enter-active, 
-.site-fade-leave-active {
-    transition: opacity 0.5s,
-}
-.site-fade-enter-from, 
-.site-fade-leave-to {
-    opacity: 0;
-}
-.site-fade-enter-to, 
-.site-fade-leave-from {
-    opacity: 1;
 }
   
 

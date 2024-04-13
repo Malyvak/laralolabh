@@ -26,8 +26,6 @@ import video8 from '@/assets/videos/008-short-converted.mp4';
 import video9 from '@/assets/videos/009-short-converted.mp4';
 import video10 from '@/assets/videos/010-short-converted.mp4';
 
-
-
 interface StringSearchKeyMap {
     [key: string]: any;
 }

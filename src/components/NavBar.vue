@@ -8,17 +8,17 @@ const isMouseOver = ref(false);
 
 onMounted(() => {
     window.addEventListener('mousemove', updateNavbarMouseVisibility);
-    window.addEventListener('scroll', updateNavbarScrollVisibility); // Listen for scroll events
-    updateNavbarScrollVisibility(); // Initial check in case the page is already scrolled
+    window.addEventListener('scroll', updateNavbarScrollVisibility); 
+    updateNavbarScrollVisibility(); 
 });
 
 onUnmounted(() => {
     window.removeEventListener('mousemove', updateNavbarMouseVisibility);
-    window.removeEventListener('scroll', updateNavbarScrollVisibility); // Remove scroll listener
+    window.removeEventListener('scroll', updateNavbarScrollVisibility); 
 });
 
 function updateNavbarScrollVisibility() {
-    const showNavbarScrollPosition = 50; // For scroll position
+    const showNavbarScrollPosition = 50; 
 
     if (window.scrollY <= showNavbarScrollPosition) {
         isScrollAtTop.value = true;
@@ -28,7 +28,7 @@ function updateNavbarScrollVisibility() {
 }
 
 function updateNavbarMouseVisibility(event?: MouseEvent) {
-    const showNavbarMousePosition = 110; // For scroll position
+    const showNavbarMousePosition = 110; 
 
     if (event && event.clientY <= showNavbarMousePosition) {
         isMouseOver.value = true;
