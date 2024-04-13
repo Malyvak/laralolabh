@@ -10,7 +10,6 @@ import NavBar from './components/NavBar.vue';
 
 const isLoaded = ref(false);
 
-// Image imports
 import image1 from '@/assets/images/header-logo.png';
 import image2 from '@/assets/images/Image1_GoFStill.png';
 import image3 from '@/assets/images/Image2_BlondedLIAG.png';
@@ -25,7 +24,6 @@ import image11 from '@/assets/images/Image10_Frog.png';
 import image12 from '@/assets/images/EyePainting.jpg';
 import image13 from '@/assets/images/QuoteCircle.png';
 
-// Add more images as needed
 
 const assetUrls = [image1, image2, image3, image4, 
     image5, image6, image7, image8, image9, image10, 

@@ -36,8 +36,11 @@ const loadVideo = (index: number) => {
   const loader = videoImports[index.toString()];
   if (loader) {
     loader().then((module: { default: string; }) => {
-      videoSources[index] = module.default;
       currentVideo.value = module.default;
+      isOverlayVisible.value = true; // Ready to fade out the old video, if any
+      setTimeout(() => {
+        isOverlayVisible.value = false; // Fade in new video
+      }, 100); // Minimal delay before fading in new video
     });
   }
 };
@@ -48,20 +51,13 @@ onMounted(() => {
 });
 
 const handleVideoEnd = () => {
-  isOverlayVisible.value = true; // Show overlay (fade to black)
-  setTimeout(() => {
     currentVideoIndex.value = (currentVideoIndex.value + 1) % Object.keys(videoImports).length;
     loadVideo(currentVideoIndex.value);
-    videoPlayerKey.value = Date.now(); // Update key to force re-render of video element
-  }, 500); // Delay to allow overlay to become fully visible
+    videoPlayerKey.value = Date.now();
 };
 
 const videoLoaded = () => {
-  // Hide overlay (fade in video)
-  isOverlayVisible.value = false;
-  setTimeout(() => {
     videoPlayer.value?.play();
-  }, 500); // Delay to allow a smooth fade-in effect
 };
 
 // Watch the currentVideo to load the new source whenever it changes
@@ -77,10 +73,6 @@ watch(currentVideo, () => {
     <section id="showreel" class="showreel">
       <div class="showreel-content">
         <div class="showreel-container">
-          <div
-            class="overlay"
-            :class="{ 'is-visible': isOverlayVisible }"
-          ></div>
           <video
               class="showreel-video"
               :key="videoPlayerKey"
@@ -89,6 +81,7 @@ watch(currentVideo, () => {
               muted
               @ended="handleVideoEnd"
               @loadedmetadata="videoLoaded"
+              :class="{ 'fade-in': !isOverlayVisible }"
           >
               <source :src="currentVideo" type="video/mp4" />
               Your browser does not support the video tag.
