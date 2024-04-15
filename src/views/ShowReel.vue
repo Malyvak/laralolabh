@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, watch, onMounted } from 'vue';
+import { ref, watch, onBeforeMount } from 'vue';
 
 const videoImports: VideoImports = {
   '0': () => import('@/assets/videos/showreel/001_ShowreelMiniCut-converted.mp4'),
@@ -43,7 +43,7 @@ const loadVideo = (index: number) => {
   }
 };
 
-onMounted(() => {
+onBeforeMount(() => {
   loadVideo(0);
 });
 

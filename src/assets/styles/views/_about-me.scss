@@ -1,0 +1,175 @@
+.about-me {
+    scroll-margin-top: 105px;
+    padding-top: 2rem;
+    padding-bottom: 6rem;
+    background-image: url('../images/EyePainting.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .title {
+        color: #FFF;
+    }
+
+    .about-me-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1.3rem;
+        background-color: white;
+        width: 100%;
+        gap: 1.2rem;
+            
+        .images-wrapper {
+            display: flex;
+            justify-content: space-evenly;
+            gap: 1.2rem;
+            padding: 0.2rem 0;
+
+            .image-container {
+                width: 14rem;
+                height: 14rem;
+                overflow: hidden;
+                position: relative;
+        
+                img {
+                    position: absolute;
+                    top: 50%; 
+                    left: 50%;
+
+                    &.image-1 {
+                        width: 14rem;
+                        transform: translate(-49%, -48%);
+                    }
+
+                    &.image-2 {
+                        width: 16rem;
+                        transform: translate(-55%, -60%);
+                    }
+
+                    &.image-3 {
+                        width: 18rem;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }    
+        }
+            
+
+        .about-me-text {
+            p {
+                font-size: 14px;
+                margin: 0;
+                margin-bottom: 0.5rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+@include break('xl') {
+    .about-me {
+        .about-me-container {
+            display: block;
+
+            .about-me-text {
+                margin: 1.4rem 0 0.2rem 0;
+            }
+        }
+    }
+}
+
+@include break('m') {
+    .about-me {
+        .about-me-container {
+            display: block;
+
+            .images-wrapper {
+                .image-container {
+                    width: 12rem;
+                    height: 12rem;
+    
+                    img {
+                        &.image-1 {
+                            width: 12rem;
+                            transform: translate(-49%, -48%);
+                        }
+    
+                        &.image-2 {
+                            width: 14rem;
+                            transform: translate(-55%, -60%);
+                        }
+    
+                        &.image-3 {
+                            width: 16rem;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                }
+            }
+
+            .about-me-text {
+                margin: 1.4rem 0 0.2rem 0;
+
+                p {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+@include break('s') {
+    .about-me {
+        .about-me-container {
+            .images-wrapper {
+                .image-container {
+                    width: 10rem;
+                    height: 10rem;
+    
+                    img {
+                        &.image-1 {
+                            width: 10rem;
+                            transform: translate(-49%, -48%);
+                        }
+    
+                        &.image-2 {
+                            width: 12rem;
+                            transform: translate(-55%, -60%);
+                        }
+    
+                        &.image-3 {
+                            width: 14rem;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                }
+            }
+
+            .about-me-text {
+                p {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+@include break('xs') {
+    .about-me {
+        .about-me-container {
+            .images-wrapper {
+                display: flex;
+                justify-content: space-around;
+                .image-container {
+                    &:last-child {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

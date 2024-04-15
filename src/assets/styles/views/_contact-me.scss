@@ -1,0 +1,264 @@
+.contact-me {
+    scroll-margin-top: 100px;
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+    background-color: #c2c2c2;
+
+    .contact-me-wrapper {
+        display: flex;
+
+        .contact-me-container {
+            display: flex;
+            flex-wrap: wrap;
+    
+            .col-1 {
+                width: 40%;
+    
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+    
+                .info {
+    
+                    .logo {
+                        width: 14rem;
+                        margin-bottom: 0.75rem;
+                    }
+                    
+                    .email {
+                        font-weight: 700;
+                        font-size: 16px;
+                    }
+                }
+            }
+            
+            .col-2 {
+                width: 60%;
+                padding: 0 4rem 0 0;
+    
+                .quote-circle {
+                    width: 100%;
+                    max-width: 25rem;
+                }
+            }
+        }
+        .contact-form {
+            width: 40%;
+            
+            .contact-header{
+                background-color: #323232;
+                color: #FFF;
+                padding: 0.5rem 1rem;
+                margin: 0;
+                font-weight: 700;
+                font-size: 14px;
+            }
+    
+            .contact-content {
+                position: relative;
+                background-color: #adadad;
+                padding: 1rem;
+    
+                .input-container {
+                    display: flex;
+    
+                    .form-group {
+                        width: 50%;
+
+                        .input-label {
+                            width: 6rem;
+                        }
+                    }
+                }
+    
+                .form-group {
+                    display: flex;
+                    margin-bottom: 0.5rem;
+                    align-items: center;
+    
+                    .input-label, .textarea-label {
+                        background-color: #FFF;
+                        padding: 10px;
+                        font-size: 12px;
+                        font-weight: 700;
+                        width: 5rem;
+                    }
+    
+                    .textarea-label {
+                        display: block;
+                        width: 100%;
+                    }
+                
+                    input,
+                    textarea {
+                        width: 100%;
+                        padding: 10px;
+                        height: 34px;
+                        font-size: 12px;
+                        border: none;
+                        font-family: "Museo", sans-serif;
+                    
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+    
+                    textarea {
+                        resize: none;
+                        height: auto;
+                        padding: 0 10px 10px 10px;
+                    }
+                }
+    
+                .textarea-group {
+                    display: block;
+                }
+    
+                .submit-button {
+                    position: absolute;
+                    bottom: 10%;
+                    left: 42.5%;
+    
+    
+                    background-color: #f36c22;
+                    color: #FFF;
+                    border: none;
+                    border-radius: 1rem;
+                    font-weight: 700;
+                    font-family: "Museo", sans-serif;
+                    font-size: 12px;
+                    padding: 0.4rem 1rem;
+    
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .contact-me-tablet-container {
+            display: none;
+        }
+        .contact-me-phone-container {
+            display: none;
+        }
+    }
+}
+
+@include break('xl') {
+    .contact-me {
+        .contact-me-wrapper {
+            .contact-me-container {
+                flex-direction: column;
+
+                .col-2 {
+                    padding: 0;
+                    margin-top: 2rem;
+
+                    .quote-circle {
+                        width: 110%;
+                    }
+                }
+            }
+            .contact-form {
+                width: 60%;
+            }
+        }
+    }
+}
+
+@include break('l') {
+    .contact-me {
+        .contact-me-wrapper {
+            .contact-me-container {
+                .col-2 {
+                    margin-top: 3rem;
+                }
+            }
+            .contact-form {
+                width: 70%;
+            }
+        }
+    }
+}
+
+@include break('m') {
+    .contact-me {
+        padding-top: 2rem;
+
+        .contact-me-wrapper {
+            flex-direction: column;
+            justify-content: space-between;
+
+            .contact-me-container {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+
+                .col-1 {
+                    width: fit-content;
+                }
+                .col-2 {
+                    display: flex;
+                    justify-content: end;
+                    margin-top: 0;
+
+                    .quote-circle {
+                        width: 70%;
+                    }
+                }
+            }
+            .contact-form {
+                width: 100%;
+                padding-top: 2rem;
+            }
+
+        }
+    }
+}
+
+@include break('s') {
+    .contact-me {
+        padding-top: 2rem;
+
+        .contact-me-wrapper {
+            flex-direction: column;
+            justify-content: space-between;
+
+            .contact-me-container {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+
+                .col-1 {
+                    display: none;
+                }
+                .col-2 {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 0;
+
+                    .quote-circle {
+                        width: 70%;
+                    }
+                }
+            }
+            .contact-form {
+                width: 100%;
+                padding-top: 2rem;
+
+                .contact-content {
+                    .input-container {
+                        display: block;
+        
+                        .form-group {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+

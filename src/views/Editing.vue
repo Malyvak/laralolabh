@@ -73,24 +73,21 @@ const closeModal = () => {
 <template>
     <section id="editing" class="editing">
         <h1 class="title">EDITING WORK</h1>
-
-        <div class="projects">
-            <div class="projects">
-            <VideoComponent
-                v-for="project in projectsData"
-                :key="project.title"
-                :videoSrc="videoMap[project.image]"
-                :image="imageMap[project.image]"
-                :title="project.title"
-                :description="project.description"
-                @click.native="openModal(project.link)"
-            />
-            </div>
-            <VideoModal
-                :showModal="showModal"
-                :videoId="currentVideoId"
-                @close="closeModal"
-            />
-        </div>
+          <div class="video-components">
+          <VideoComponent
+              v-for="project in projectsData"
+              :key="project.title"
+              :videoSrc="videoMap[project.image]"
+              :image="imageMap[project.image]"
+              :title="project.title"
+              :description="project.description"
+              @click.native="openModal(project.link)"
+          />
+          </div>
+          <VideoModal
+              :showModal="showModal"
+              :videoId="currentVideoId"
+              @close="closeModal"
+          />
     </section>
 </template>

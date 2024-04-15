@@ -1,0 +1,14 @@
+.intro-video-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #000;
+
+    .intro-centered-video {
+        width: auto; 
+        max-width: 100%; 
+        height: auto; 
+        max-height: 100vh; 
+    }
+}

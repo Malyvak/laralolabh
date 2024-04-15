@@ -1,0 +1,39 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    
+    .modal-content {
+        position: relative;
+        background: #000;
+        border-radius: 8px;
+
+        .button-container {
+            width: 100%;
+            display: flex;
+            justify-content: end;
+            padding: 0.5rem 0.4rem 0rem 0rem;
+            
+            .close-button {
+                width: 1.5em;
+                height: 1.5em;
+
+                &:hover {
+                    cursor: pointer;
+                    opacity: 0.75;
+                }
+            }
+        }
+
+        .youtube-video {
+            padding: 0rem 2rem 1.5rem 2rem;
+        }
+    }
+}

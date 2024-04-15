@@ -80,31 +80,25 @@
                     creative works, a spectrum that I tailor to day by day based on the clients' needs.
                 </p>
                 <br>
-
                 <p>
                     I have also spent several years working within companies to deliver content internally, and for our clients:
                 </p>
                 <br>
-
                 <p class="company">Connect Creative</p>
                 <p><i>(media & marketing production company)</i></p>
                 <p><i>Junior editor</i></p>
                 <br>
-
                 <p class="company">Girl Shaped Flames</p>
                 <p><i>In-house editor</i></p>
                 <p><i>Post-production artist/co-ordinator</i></p>
                 <p><i>Production assistant</i></p>
                 <br>
-
                 <p class="company">UNIQ You</p>
                 <p><i>In-house editor</i></p>
                 <br>
-
                 <p class="company">Trellis Collective</p>
                 <p><i>In-house editor</i></p>
                 <br>
-
             </div>
         </div>
     </section>

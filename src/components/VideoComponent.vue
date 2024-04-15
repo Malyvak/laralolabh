@@ -29,7 +29,7 @@ const pauseVideo = (event: Event) => {
 </script>
 
 <template>
-    <div class="project">
+    <div class="video-component">
         <div 
             class="video-container" 
             @click="$emit('imageClick')"

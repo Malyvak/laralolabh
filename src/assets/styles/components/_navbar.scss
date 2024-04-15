@@ -1,0 +1,118 @@
+.header {
+    position: fixed;
+    background-color: #323232;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    top: 0;  
+    width: 100%;
+    z-index: 5;
+
+    @include break('l') {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+
+        @include break('l') {
+            display: block;
+
+            .nav-links {
+                padding-top: 1rem;
+                width: 100%;
+                gap: none;
+                justify-content: space-between;
+            }
+        }
+
+        @include break('m') {
+            display: none;
+        }
+
+        .brand {
+            width: 14rem;
+            margin-right: 4rem;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+
+            .nav-link {
+                text-decoration: none;
+                color: #fff;
+                transition: color 0.3s ease;
+                font-family: Futura, sans-serif;
+                font-weight: bold;
+                font-size: 12px;
+                letter-spacing: 0.1em;
+                text-align: center;
+
+                &.contact {
+                    background-color: #004159;
+                    padding: 0.5rem;
+                    border: 1px solid #FFF;
+                }
+
+                &:hover {
+                    color: #aaa;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    //Navbar Dropdown Styling
+    .navbar-tablet {
+        display: none;
+        position: relative;
+
+        @include break('m') {
+            display: block;
+        }
+        
+        @include break('xs') {
+            padding-left: 1rem;
+        }
+
+        .brand {
+            width: 14rem;
+            margin-right: 4rem;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .nav-links {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            z-index: 10;
+            background-color: black;
+            width: 14rem;
+
+            .nav-link {
+                text-decoration: none;
+                color: #fff;
+                transition: color 0.3s ease;
+                font-family: Futura, sans-serif;
+                font-weight: bold;
+                font-size: 12px;
+                letter-spacing: 0.1em;
+                padding: 1rem;
+                border-bottom: 1px solid white;
+
+                &:hover {
+                    color: #aaa;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

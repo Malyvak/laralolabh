@@ -1,10 +1,11 @@
 <script lang="ts" setup>
 import logo from '@/assets/images/header-logo.png'
-import { onMounted, onUnmounted, computed, ref } from 'vue';
+import { onMounted, onUnmounted, computed, ref, toValue } from 'vue';
 
 const headerOpacity = computed(() => isScrollAtTop.value || isMouseOver.value);
 const isScrollAtTop = ref(false);
 const isMouseOver = ref(false);
+const isMenuVisible = ref(false);
 
 onMounted(() => {
     window.addEventListener('mousemove', updateNavbarMouseVisibility);
@@ -43,6 +44,10 @@ function scroll(id: string) {
         element.scrollIntoView({behavior: 'smooth'});
     }
 }
+
+function toggleMenu() {
+    isMenuVisible.value = !isMenuVisible.value;
+}
 </script>
 
 
@@ -50,7 +55,7 @@ function scroll(id: string) {
     <Transition name="fade">
         <header v-if="headerOpacity" class="header">
             <nav class="navbar">
-                <img class="brand" :src="logo"/>
+                <img @click="toggleMenu" class="brand" :src="logo"/>
                 <div class="nav-links">
                     <a @click="() => scroll('showreel')" class="nav-link">HOME</a>
                     <a @click="() => scroll('editing')" class="nav-link">EDITING WORK</a>
@@ -58,6 +63,18 @@ function scroll(id: string) {
                     <a @click="() => scroll('about-me')" class="nav-link">ABOUT ME</a>
                     <a @click="() => scroll('contact-me')" class="nav-link contact">CONTACT ME</a>
                 </div>
+            </nav>
+            <nav class="navbar-tablet">
+                <img @click="toggleMenu" class="brand" :src="logo"/>
+                <Transition name="slide-out">
+                    <div v-if="isMenuVisible" class="nav-links">
+                        <a @click="() => scroll('showreel')" class="nav-link">HOME</a>
+                        <a @click="() => scroll('editing')" class="nav-link">EDITING WORK</a>
+                        <a @click="() => scroll('professional-information')" class="nav-link">PROFESSIONAL INFORMATION</a>
+                        <a @click="() => scroll('about-me')" class="nav-link">ABOUT ME</a>
+                        <a @click="() => scroll('contact-me')" class="nav-link">CONTACT ME</a>
+                    </div>
+                </Transition>
             </nav>
         </header>
     </Transition>
