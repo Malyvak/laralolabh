@@ -33,24 +33,7 @@
                 position: relative;
         
                 img {
-                    position: absolute;
-                    top: 50%; 
-                    left: 50%;
-
-                    &.image-1 {
-                        width: 14rem;
-                        transform: translate(-49%, -48%);
-                    }
-
-                    &.image-2 {
-                        width: 16rem;
-                        transform: translate(-55%, -60%);
-                    }
-
-                    &.image-3 {
-                        width: 18rem;
-                        transform: translate(-50%, -50%);
-                    }
+                    width: 14rem;
                 }
             }    
         }
@@ -105,20 +88,7 @@
                     height: 12rem;
     
                     img {
-                        &.image-1 {
-                            width: 12rem;
-                            transform: translate(-49%, -48%);
-                        }
-    
-                        &.image-2 {
-                            width: 14rem;
-                            transform: translate(-55%, -60%);
-                        }
-    
-                        &.image-3 {
-                            width: 16rem;
-                            transform: translate(-50%, -50%);
-                        }
+                        width: 12rem;
                     }
                 }
             }
@@ -145,20 +115,7 @@
                     height: 10rem;
     
                     img {
-                        &.image-1 {
-                            width: 10rem;
-                            transform: translate(-49%, -48%);
-                        }
-    
-                        &.image-2 {
-                            width: 12rem;
-                            transform: translate(-55%, -60%);
-                        }
-    
-                        &.image-3 {
-                            width: 14rem;
-                            transform: translate(-50%, -50%);
-                        }
+                        width: 10rem;
                     }
                 }
             }
