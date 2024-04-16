@@ -7,11 +7,11 @@
         <h1 class="title">PROFESSIONAL INFORMATION</h1>
         <div class="content">
             <p>
-                A passionate creative and lifelong follower of the arts, my first editing employment was during high school - 
+                An avid creative and lifelong follower of the arts, my first editing employment was during high school - 
                 work which would grow into both passion and aspiration throughout the rest of my education and beyond.
             </p>   
             <p>
-                Having worked across various fields within Brisbane/Meanjin's creative scene and graduated Film School with 
+                Having worked across various fields within Australia's creative scene and graduated Griffith Film School with 
                 a bachelor of Film and Screen Media, I have gained a broad skillset in marketing and advertising;
                 design and branding; digital and emerging media; film production; and visual arts, to name a few, specialising 
                 in video editing. This love of editing has brought me regular freelance and contracting work; in-house editing 
@@ -27,10 +27,6 @@
                 girls and women, both locally and Australia-wide. For the past seven years I have been creating content for 
                 businesses and not-for-profits within this area, which include <i>Trellis Collective</i>, 
                 <i>UNIQ You, Girl Shaped Flames,</i> and <i>The Centre for Women & Co.</i> 
-            </p>
-            <p>
-                On the side, I spend my time assisting on various sets, holding art exhibitions, hosting painting classes, 
-                teaching, and making visual arts commissions.
             </p>
         </div>
 
@@ -85,7 +81,7 @@
                 </p>
                 <br>
                 <p class="company">Connect Creative</p>
-                <p><i>(media & marketing production company)</i></p>
+                <p>(media & marketing production company)</p>
                 <p><i>Junior editor</i></p>
                 <br>
                 <p class="company">Girl Shaped Flames</p>

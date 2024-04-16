@@ -79,13 +79,24 @@
         @include break('xs') {
             padding-left: 1rem;
         }
+        .navbar-tablet-content {
+            display: flex;
+            align-items: center;
+            width: fit-content;
 
-        .brand {
-            width: 14rem;
-            margin-right: 4rem;
+            .navbar-icon {
+                height: 3.2rem;
+                margin-bottom: 0.35rem;
+                margin-right: 1rem;
+                filter: invert(100%) sepia(5%) saturate(7419%) hue-rotate(314deg) brightness(117%) contrast(104%);
+            }
 
-            &:hover {
-                cursor: pointer;
+            .brand {
+                width: 14rem;
+    
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
 

@@ -51,6 +51,10 @@ import quoteCircle from '@/assets/images/QuoteCircle.png'
                     <button class="submit-button" type="submit">SEND</button>
                 </div>
             </form>
+            <div class="phone-info">
+                <img class="logo" :src="logo"/>
+                <div class="email">laralolabh@gmail.com</div>
+            </div>
         </div>    
     </section>
 </template>

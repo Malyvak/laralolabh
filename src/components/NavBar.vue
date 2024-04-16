@@ -1,21 +1,28 @@
 <script lang="ts" setup>
 import logo from '@/assets/images/header-logo.png'
-import { onMounted, onUnmounted, computed, ref, toValue } from 'vue';
+import { onMounted, onUnmounted, computed, ref } from 'vue';
+import navbarIcon from '@/assets/icons/navbar-icon.png';
 
 const headerOpacity = computed(() => isScrollAtTop.value || isMouseOver.value);
 const isScrollAtTop = ref(false);
 const isMouseOver = ref(false);
 const isMenuVisible = ref(false);
+const dropdown = ref<HTMLElement | null>(null);
+const logoDropdown = ref<HTMLElement | null>(null);
+
 
 onMounted(() => {
     window.addEventListener('mousemove', updateNavbarMouseVisibility);
-    window.addEventListener('scroll', updateNavbarScrollVisibility); 
+    window.addEventListener('scroll', updateNavbarScrollVisibility);
+    document.addEventListener('click', handleClickOutside);
+
     updateNavbarScrollVisibility(); 
 });
 
 onUnmounted(() => {
     window.removeEventListener('mousemove', updateNavbarMouseVisibility);
-    window.removeEventListener('scroll', updateNavbarScrollVisibility); 
+    window.removeEventListener('scroll', updateNavbarScrollVisibility);
+    document.removeEventListener('click', handleClickOutside);
 });
 
 function updateNavbarScrollVisibility() {
@@ -39,10 +46,20 @@ function updateNavbarMouseVisibility(event?: MouseEvent) {
 }
 
 function scroll(id: string) {
+    isMenuVisible.value = false;
     const element = document.getElementById(id);
     if (element) {
         element.scrollIntoView({behavior: 'smooth'});
     }
+}
+
+function handleClickOutside(event?: MouseEvent) {
+    if (event) {
+        let target = event.target;
+        if ( logoDropdown.value && !logoDropdown.value.contains(target as Node)) {
+            isMenuVisible.value = false;
+        }
+  }
 }
 
 function toggleMenu() {
@@ -65,9 +82,12 @@ function toggleMenu() {
                 </div>
             </nav>
             <nav class="navbar-tablet">
-                <img @click="toggleMenu" class="brand" :src="logo"/>
+                <div class="navbar-tablet-content" ref="logoDropdown" @click="toggleMenu">
+                    <img :src="navbarIcon" class="navbar-icon"/>
+                    <img class="brand" :src="logo"/>
+                </div>
                 <Transition name="slide-out">
-                    <div v-if="isMenuVisible" class="nav-links">
+                    <div v-if="isMenuVisible" ref="dropdown" class="nav-links">
                         <a @click="() => scroll('showreel')" class="nav-link">HOME</a>
                         <a @click="() => scroll('editing')" class="nav-link">EDITING WORK</a>
                         <a @click="() => scroll('professional-information')" class="nav-link">PROFESSIONAL INFORMATION</a>

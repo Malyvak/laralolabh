@@ -23,20 +23,17 @@ import image3 from '@/assets/images/AboutMeLaraImage_3.jpg';
             </div>
             <div class="about-me-text">
                 <p>
-                    I have spent my life so far dedicated to chasing the arts, and can't wait to spend 
-                    the rest uncovering more. My main passion for editing has led me to work with a 
-                    vast range of creative individuals and projects with whom I have grown within the
-                    Brisbane/Meanjin community and beyond.
+                    So far I've spent all my work time, downtime, and everything in between chasing the arts, 
+                    and I look forward to continuing to do so in new and different ways every day.
                 </p>
                 <p>
-                    When I'm not working with film, you might find me silversmithing, 
-                    restoring gravestones, or painting and photographing for local bands. 
-                    I'll never have a nice manicure, but I'll certainly never be bored!
+                    On the weekend you might find me photographing for local gigs, hosting painting classes, 
+                    restoring headstones, holding local art exhibitions, or dodgily silversmithing. 
+                    I'll never have a nice manicure but I doubt I'll ever be bored…
                 </p>
                 <p>
-                    Whether you're a fellow creator, or someone who needs one on
-                    their team - I would love to work with you. Feel free to drop me a
-                    line below and let's chat.
+                    Whether you're a fellow creator, or someone who needs one on their team - 
+                    I would love to work with you. Feel free to drop me a line below and let's chat.
                 </p>
             </div>
         </div>

@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
+import playButton from '@/assets/icons/play-button-icon.png';
 
 const props = defineProps<{
     videoSrc: any;
@@ -9,16 +10,17 @@ const props = defineProps<{
 }>();
 
 const showVideo= ref(false);
+const videoElementRef = ref<HTMLVideoElement | null>(null);
 
-const playVideo = (event: Event) => {
-    const videoElement = event.target as HTMLVideoElement;
+const playVideo = () => {
+    const videoElement = videoElementRef.value;
     if (videoElement) {
         videoElement.play();
     }
 };
 
-const pauseVideo = (event: Event) => {
-    const videoElement = event.target as HTMLVideoElement;
+const pauseVideo = () => {
+    const videoElement = videoElementRef.value;
     if (videoElement) {
         setTimeout(() => {
             videoElement.pause();
@@ -41,14 +43,25 @@ const pauseVideo = (event: Event) => {
                 <video 
                     v-if="showVideo"
                     class="project-video"
+                    ref="videoElementRef"
                     :src="videoSrc"
-                    loop 
-                    @mouseenter="playVideo" 
-                    @mouseleave="pauseVideo" 
+                    loop
                     muted
                 >
                 </video>
             </Transition>
+            <div 
+                class="play-button-wrapper"
+                v-show="showVideo"
+                @mouseenter="playVideo"
+                @mouseleave="pauseVideo"
+                >
+                <img 
+                    v-show="showVideo"
+                    :src="playButton"
+                    class="play-button"
+                />
+            </div>
         </div>
         
         <div class="project-title">{{ title }}</div>

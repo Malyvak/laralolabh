@@ -117,7 +117,7 @@
                 .submit-button {
                     position: absolute;
                     bottom: 10%;
-                    left: 42.5%;
+                    left: 43.5%;
     
     
                     background-color: #f36c22;
@@ -135,10 +135,7 @@
                 }
             }
         }
-        .contact-me-tablet-container {
-            display: none;
-        }
-        .contact-me-phone-container {
+        .phone-info {
             display: none;
         }
     }
@@ -219,6 +216,7 @@
 @include break('s') {
     .contact-me {
         padding-top: 2rem;
+        padding-bottom: 0;
 
         .contact-me-wrapper {
             flex-direction: column;
@@ -257,7 +255,23 @@
                     }
                 }
             }
-
+            .phone-info {
+                display: flex;
+                flex-direction: column;
+                margin: 3rem 0rem;
+                width: 100%;
+                justify-content: space-around;
+                align-items: center;
+                .logo {
+                    width: 12rem;
+                }
+                
+                .email {
+                    margin-top: 0.5rem;
+                    font-weight: 700;
+                    font-size: 14px;
+                }
+            }
         }
     }
 }

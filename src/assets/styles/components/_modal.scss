@@ -2,18 +2,20 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.6);
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10;
+    z-index: 100;
     
     .modal-content {
         position: relative;
         background: #000;
         border-radius: 8px;
+        width: 90%;
+        max-width: 600px;
 
         .button-container {
             width: 100%;
@@ -33,7 +35,26 @@
         }
 
         .youtube-video {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
             padding: 0rem 2rem 1.5rem 2rem;
+        }
+    }
+}
+
+@include break('s') {
+    .modal-overlay {
+        .modal-content {
+            width: 95%;
+        }
+    }
+}
+
+@include break('xs') {
+    .modal-overlay {
+        .modal-content {
+            width: 100%;
         }
     }
 }
