@@ -161,6 +161,10 @@
 
             p {
                 font-size: 12px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
             }
         }
         .table-container {
@@ -191,7 +195,6 @@
 
 @include break('xs') {
     .professional-information {
-        padding-bottom: 0;
         .title {
             padding-left: 1rem;
             padding-right: 1rem;
@@ -199,7 +202,6 @@
         .content {
             padding-left: 1rem;
             padding-right: 1rem;
-            padding-bottom: 1rem;
             column-count: 1;
 
             p {
