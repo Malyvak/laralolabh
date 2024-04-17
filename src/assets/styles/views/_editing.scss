@@ -14,7 +14,7 @@
         justify-content: space-evenly;
         gap: 1.5rem;
     
-        .video-component {
+        .video-component, .phone-video-component {
             color: #fff;
             display: flex;
             flex-direction: column;
@@ -31,6 +31,21 @@
 
                 &:hover {
                     cursor: pointer;
+                }
+
+                &:active {
+
+                    .project-image {
+                        opacity: 0.85;
+                        transition: opacity 0.1s ease;
+                    }
+
+                    .play-button-wrapper {
+                        .play-button {
+                            width: 6.25rem;
+                            transition: width 0.1s ease;
+                        }
+                    }
                 }
 
                 .project-video, .project-image { 
@@ -89,6 +104,9 @@
                 font-size: 12px;
             }
         }
+        .phone-video-component {
+            display: none;
+        }
     }
 } 
 
@@ -96,10 +114,23 @@
     .editing {
         .video-components {
             .video-component {
+                display: none;
+            }
+            
+            .phone-video-component {
+                display: flex;
                 width: 10rem;
 
                 .video-container {
                     height: 10rem;
+
+                    &:active {
+                        .play-button-wrapper {
+                            .play-button {
+                                width: 4.25rem;
+                            }
+                        }
+                    }
 
                     .play-button-wrapper {
                         .play-button {

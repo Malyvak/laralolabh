@@ -1,26 +1,32 @@
 <script lang="ts" setup>
 import { ref, watch, onBeforeMount } from 'vue';
 
-const videoImports: VideoImports = {
-  '0': () => import('@/assets/videos/showreel/001_ShowreelMiniCut-converted.mp4'),
-  '1': () => import('@/assets/videos/showreel/002_ShowreelMiniCut-converted.mp4'),
-  '2': () => import('@/assets/videos/showreel/003_ShowreelMiniCut-converted.mp4'),
-  '3': () => import('@/assets/videos/showreel/004_ShowreelMiniCut-converted.mp4'),
-  '4': () => import('@/assets/videos/showreel/005_ShowreelMiniCut-converted.mp4'),
-  '5': () => import('@/assets/videos/showreel/006_ShowreelMiniCut-converted.mp4'),
-  '6': () => import('@/assets/videos/showreel/007_ShowreelMiniCut-converted.mp4'),
-  '7': () => import('@/assets/videos/showreel/008_ShowreelMiniCut-converted.mp4'),
-  '8': () => import('@/assets/videos/showreel/009_ShowreelMiniCut-converted.mp4'),
-  '9': () => import('@/assets/videos/showreel/010_ShowreelMiniCut-converted.mp4'),
-  '10': () => import('@/assets/videos/showreel/011_ShowreelMiniCut-converted.mp4'),
-  '11': () => import('@/assets/videos/showreel/012_ShowreelMiniCut-converted.mp4'),
-  '12': () => import('@/assets/videos/showreel/013_ShowreelMiniCut-converted.mp4'),
-  '13': () => import('@/assets/videos/showreel/014_ShowreelMiniCut-converted.mp4'),
+interface StringSearchKeyMap {
+  [key:string]: () => Promise<any>;
+}
+
+function importVideo(fileName: string) {
+  return () => import(`@/assets/videos/showreel/${fileName}.mp4`);
+}
+
+const videoImports: StringSearchKeyMap = {
+  '0': importVideo('001_ShowreelMiniCut-converted'),
+  '1': importVideo('002_ShowreelMiniCut-converted'),
+  '2': importVideo('003_ShowreelMiniCut-converted'),
+  '3': importVideo('004_ShowreelMiniCut-converted'),
+  '4': importVideo('005_ShowreelMiniCut-converted'),
+  '5': importVideo('006_ShowreelMiniCut-converted'),
+  '6': importVideo('007_ShowreelMiniCut-converted'),
+  '7': importVideo('008_ShowreelMiniCut-converted'),
+  '8': importVideo('009_ShowreelMiniCut-converted'),
+  '9': importVideo('010_ShowreelMiniCut-converted'),
+  '10': importVideo('011_ShowreelMiniCut-converted'),
+  '11': importVideo('012_ShowreelMiniCut-converted'),
+  '12': importVideo('013_ShowreelMiniCut-converted'),
+  '13': importVideo('014_ShowreelMiniCut-converted'),
 };
 
-interface VideoImports {
-  [key:string]: any;
-}
+
 
 const currentVideoIndex = ref(0);
 const currentVideo = ref('');
@@ -75,6 +81,7 @@ watch(currentVideo, () => {
               ref="videoPlayer"
               autoplay
               muted
+              playinline
               @ended="handleVideoEnd"
               @loadedmetadata="videoLoaded"
               :class="{ 'fade-in': !isOverlayVisible }"

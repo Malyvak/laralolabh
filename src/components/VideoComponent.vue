@@ -1,16 +1,34 @@
 <script lang="ts" setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import playButton from '@/assets/icons/play-button-icon.png';
 
 const props = defineProps<{
-    videoSrc: any;
-    image: any;
+    video: string;
+    image: string;
     title: string;
     description: string;
 }>();
 
+const imageSrc = ref('');
+const videoSrc = ref('');
 const showVideo= ref(false);
 const videoElementRef = ref<HTMLVideoElement | null>(null);
+
+
+onMounted(() => {
+    loadImage();
+    loadVideo();
+});
+
+const loadImage = async () => {
+  const module = await import(`@/assets/images/${props.image}.png`);
+  imageSrc.value = module.default;
+};
+
+const loadVideo = async () => {
+  const module = await import(`@/assets/videos/${props.video}.mp4`);
+  videoSrc.value = module.default; 
+};
 
 const playVideo = () => {
     const videoElement = videoElementRef.value;
@@ -38,7 +56,7 @@ const pauseVideo = () => {
             @mouseenter="showVideo = true" 
             @mouseleave="showVideo = false" 
         >   
-            <img class="project-image" :src="image"/>
+            <img class="project-image" :src="imageSrc"/>
             <Transition name="slow-fade">
                 <video 
                     v-if="showVideo"
