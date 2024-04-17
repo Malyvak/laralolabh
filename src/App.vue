@@ -19,7 +19,7 @@ function handleVideoEnd() {
 <template>
     <transition name="site-fade">
         <div v-if="!isVideoEnded" class="intro-video-container">
-            <video autoplay muted @ended="handleVideoEnd" class="intro-centered-video">
+            <video autoplay muted playsinline @ended="handleVideoEnd" class="intro-centered-video">
                 <source :src="videoSrc" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
