@@ -41,10 +41,21 @@
             color: #fff;
             font-family: Museo, sans-serif;
             font-weight: 700;
-            font-size: 0.8rem;
+            font-size: 14px;
             
             .bold {
                 font-weight: 900;
+            }
+        }
+    }
+}
+
+@include break('l') {
+    .showreel {
+        .showreel-subtext-container {
+            .showreel-subtext {
+                font-size: 12px;
+                font-weight: 700;
             }
         }
     }
@@ -57,8 +68,7 @@
 
         .showreel-subtext-container {
             .showreel-subtext {
-                font-size: 11px;
-                font-weight: 700;
+                font-size: 10px;
             }
         }
     }
@@ -70,7 +80,7 @@
             padding: 0 1rem 0 1rem;
             .showreel-subtext {
                 text-align: center;
-                font-size: 10px;
+                font-size: 8px;
                 font-weight: 300;
             }
         }
@@ -81,7 +91,7 @@
     .showreel {
         .showreel-subtext-container {
             .showreel-subtext {
-                font-size: 9px;
+                font-size: 6px;
                 font-weight: 300;
             }
         }
