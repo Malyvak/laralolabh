@@ -81,7 +81,7 @@ watch(currentVideo, () => {
               ref="videoPlayer"
               autoplay
               muted
-              playinline
+              playsinline
               @ended="handleVideoEnd"
               @loadedmetadata="videoLoaded"
               :class="{ 'fade-in': !isOverlayVisible }"
